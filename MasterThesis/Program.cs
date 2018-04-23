@@ -1,4 +1,5 @@
 ﻿using System;
+using BayNet;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,8 @@ namespace MasterThesis
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("start");
+            var test = new Lol();
+            test.Test();
         }
     }
 }

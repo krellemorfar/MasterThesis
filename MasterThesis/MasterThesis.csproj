@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{53A73355-8C55-4690-8462-8EB24D0C27D9}</ProjectGuid>
+    <ProjectGuid>{DAE8F760-E220-4A42-91E4-30F5C5217750}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>MasterThesis</RootNamespace>
     <AssemblyName>MasterThesis</AssemblyName>
@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BayNet\BayNet.csproj">
+      <Project>{6d30b6f2-227a-48cc-afe1-7b2a56f3bcf5}</Project>
+      <Name>BayNet</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
