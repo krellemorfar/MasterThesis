@@ -10,6 +10,7 @@ namespace MasterThesis
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("start");
         }
     }
 }
