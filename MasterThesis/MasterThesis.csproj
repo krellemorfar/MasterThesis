@@ -49,9 +49,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BayNet\BayNet.csproj">
-      <Project>{6d30b6f2-227a-48cc-afe1-7b2a56f3bcf5}</Project>
-      <Name>BayNet</Name>
+    <ProjectReference Include="..\BayNetLibrary\BayNetLibrary.csproj">
+      <Project>{9f127264-5f10-4854-9c20-0bc23e8e352d}</Project>
+      <Name>BayNetLibrary</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
