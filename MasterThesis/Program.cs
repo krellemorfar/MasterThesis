@@ -4,13 +4,35 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DomainModels;
+using DataService;
 
 namespace MasterThesis
 {
     class Program
     {
+        //private static CompetitionService _competitionService;
+        private static FixtureService _fixtureService;
+
         static void Main(string[] args)
         {
+            _fixtureService = new FixtureService();
+
+            Fixture fixture = new Fixture();
+            fixture.Id = 1;
+            fixture.Status = "FINISHED";
+            fixture.Matchday = 1;
+
+            _fixtureService.AddFixture(fixture);
+
+
+            /*
+            _competitionService = new CompetitionService();
+            Competition competition = _competitionService.GetCompetitionById(445);
+            */
+
+            
+            /*
             BayNet bayNet = new BayNet();
 
             Node rainNode = new Node(1, "Rain");
@@ -55,9 +77,10 @@ namespace MasterThesis
             element.Add(3, 5);
             data.Add(element);
 
-            bayNet.addData(data);
+            bayNet.AddData(data);
 
             bayNet.printNetwork();
+            */
         }
     }
 }

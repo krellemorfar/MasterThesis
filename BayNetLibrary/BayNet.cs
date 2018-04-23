@@ -25,13 +25,12 @@ namespace BayNetLibrary
             nodes.Add(node);
         }
 
-        public void addData(List<Dictionary<int, int>> data)
+        public void AddData(List<Dictionary<int, int>> data)
         {
             foreach (var dictionary in data)
             {
                 foreach (var nodedata in dictionary)
                 {
-                    // TODO check if node is found
                     Node node = this.nodes.SingleOrDefault(s => s.Id == nodedata.Key);
 
                     if (node != null)
