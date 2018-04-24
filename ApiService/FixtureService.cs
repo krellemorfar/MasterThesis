@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using DomainModels;
 
-namespace DataService
+namespace ApiService
 {
     public class FixtureService
     {

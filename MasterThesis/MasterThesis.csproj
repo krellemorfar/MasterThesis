@@ -34,6 +34,7 @@
   <ItemGroup>
     <Reference Include="netstandard, Version=2.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -53,10 +54,6 @@
     <ProjectReference Include="..\BayNetLibrary\BayNetLibrary.csproj">
       <Project>{9f127264-5f10-4854-9c20-0bc23e8e352d}</Project>
       <Name>BayNetLibrary</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DataService\DataService.csproj">
-      <Project>{e0a57c28-3684-4f44-b8c5-bf143cfcde6d}</Project>
-      <Name>DataService</Name>
     </ProjectReference>
     <ProjectReference Include="..\DomainModels\DomainModels.csproj">
       <Project>{6acac0b6-f782-4cd3-9efb-7613bcc440e6}</Project>

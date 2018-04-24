@@ -18,20 +18,29 @@ namespace MasterThesis
         {
             _fixtureService = new FixtureService();
 
+            int fixtureId = 159316;
+
+
+
+
+
+            /*
+            _fixtureService = new FixtureService();
+
             Fixture fixture = new Fixture();
             fixture.Id = 1;
             fixture.Status = "FINISHED";
             fixture.Matchday = 1;
 
             _fixtureService.AddFixture(fixture);
-
+            */
 
             /*
             _competitionService = new CompetitionService();
             Competition competition = _competitionService.GetCompetitionById(445);
             */
 
-            
+
             /*
             BayNet bayNet = new BayNet();
 

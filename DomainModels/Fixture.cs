@@ -1,20 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DomainModels
 {
-    [Table("fixture")]
     public class Fixture
     {
-        [Column("id")]
         private int id;
-
-        [Column("status")]
         private string status;
-
-        [Column("matchday")]
         private int matchday;
 
         public int Id { get => id; set => id = value; }
