@@ -5,24 +5,84 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DomainModels;
-using DataService;
+using ApiService;
+using DatabaseService;
+using MySql.Data.MySqlClient;
 
 namespace MasterThesis
 {
     class Program
     {
-        //private static CompetitionService _competitionService;
-        private static FixtureService _fixtureService;
+        private static DbService _dbService;
+        private static FootballDataService _footballDataService;
 
         static void Main(string[] args)
         {
-            _fixtureService = new FixtureService();
+            _dbService = new DbService();
+
+            Fixture fixture = new Fixture();
+            fixture.Id = 1;
+            fixture.Status = "FINISHED";
+            fixture.Matchday = 1;
+
+            _dbService.AddFixture(fixture);
+
+            /*
+            bool enableDb = false;
+            bool enableApi = true;
 
             int fixtureId = 159316;
+            */
 
+            /*
+             * DATABASE
+             */
 
+            /*
+            if (enableDb)
+            {
+                Console.WriteLine("DATABASE");
+                Console.WriteLine("");
+                _dbService = new DbService();
 
+                Console.WriteLine("All fixtures");
+                List<Fixture> dbFixtures = _dbService.GetFixtures();
+                foreach (Fixture tmp in dbFixtures)
+                {
+                    Console.WriteLine(tmp.ToString());
+                }
 
+                Console.WriteLine("");
+
+                Console.WriteLine("Single fixture");
+                Fixture dbFixture = _dbService.GetFixture(fixtureId);
+                Console.WriteLine(dbFixture.ToString());
+
+                Console.WriteLine("");
+                Console.WriteLine("");
+            }
+            */
+
+            /*
+             * API
+             */
+
+            /*
+            if (enableApi)
+            {
+                Console.WriteLine("API");
+                Console.WriteLine("");
+                _footballDataService = new FootballDataService();
+
+                Console.WriteLine("Single fixture");
+                Fixture apiFixture = _footballDataService.GetFixture(fixtureId);
+                Console.WriteLine(apiFixture.ToString());
+
+                Console.WriteLine("");
+                Console.WriteLine("");
+            }
+
+            */
 
             /*
             _fixtureService = new FixtureService();

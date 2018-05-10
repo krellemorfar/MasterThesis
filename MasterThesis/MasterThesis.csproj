@@ -32,6 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.11.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="netstandard, Version=2.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -51,14 +52,25 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ApiService\ApiService.csproj">
+      <Project>{718b429b-4235-4fec-aed1-5aa1576c13c9}</Project>
+      <Name>ApiService</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BayNetLibrary\BayNetLibrary.csproj">
       <Project>{9f127264-5f10-4854-9c20-0bc23e8e352d}</Project>
       <Name>BayNetLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DatabaseService\DatabaseService.csproj">
+      <Project>{24a140f9-7407-40fa-b099-a361b63cc3c4}</Project>
+      <Name>DatabaseService</Name>
     </ProjectReference>
     <ProjectReference Include="..\DomainModels\DomainModels.csproj">
       <Project>{6acac0b6-f782-4cd3-9efb-7613bcc440e6}</Project>
       <Name>DomainModels</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DatabaseService\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
